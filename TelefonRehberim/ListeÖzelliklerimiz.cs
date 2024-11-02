@@ -3,7 +3,7 @@ class ListeÖzellikleri{
     List<Kisi> Kisilerim = new List<Kisi>();
     
     //Başlangıçta 5 kişi ekledik.
-    public ListeÖzellikleri(){
+public ListeÖzellikleri(){
         Kisilerim.AddRange(new List<Kisi>{
             new Kisi("Ali", "Veli", "1234567890"),
             new Kisi("Ayşe", "Fatma", "0987654321"),

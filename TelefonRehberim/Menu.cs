@@ -1,7 +1,11 @@
 class Menu {
 
     public void Baslat(){
-        while(true)
+
+        ListeÖzellikleri listeÖzellikleri = new ListeÖzellikleri();
+        Boolean devam = true;
+
+        while(devam)
         {
             Console.WriteLine("1. Telefon Numarası Kaydet");
             Console.WriteLine("2. Telefon Numarası Sil");
@@ -15,20 +19,26 @@ class Menu {
             {
                 case "1":
                     // Telefon Numarası Kaydet
+                    listeÖzellikleri.Ekle();
                     break;
                 case "2":
                     // Telefon Numarası Sil
+                    listeÖzellikleri.Sil();
                     break;
                 case "3":
                     // Telefon Numarası Güncelle
+                    listeÖzellikleri.Guncelle();
                     break;
                 case "4":
                     // Rehber Listeleme
+                    listeÖzellikleri.Listele();
                     break;
                 case "5":
                     // Rehberde Arama
+                    listeÖzellikleri.RehberdeAra();
                     break;
                 case "0":
+                    devam=false;
                     // Çıkış
                     break;
                 default:
