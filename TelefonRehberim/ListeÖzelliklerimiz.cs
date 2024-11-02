@@ -146,5 +146,30 @@ public void Listele(){
     }
 }
 
-public void 
+public void RehberdeAra(){
+    Console.WriteLine("Lütfen aramak istediğiniz kişinin adını veya soyadını giriniz: ");
+    string arananAdSoyad = Console.ReadLine().ToLower();
+    bool bulunduMu = false;
+    foreach(Kisi kisi in Kisilerim){
+        if(kisi.Ad.ToLower().Contains(arananAdSoyad) || kisi.Soyad.ToLower().Contains(arananAdSoyad)){
+            Console.WriteLine("Ad: {0}, Soyad: {1}, Numara: {2}", kisi.Ad, kisi.Soyad, kisi.Numara);
+            bulunduMu = true;
+        }
+    }
+    if(!bulunduMu){
+        Console.WriteLine("Aradığınız krtiterlere uygun veri rehberde bulunamadı. Lütfen bir seçim yapınız.");
+        Console.WriteLine("1. Menuye geri dön");
+        Console.WriteLine("2. Yeniden deneyin");
+        switch(Console.ReadLine()){
+            case "1":
+                break;
+            case "2":
+                RehberdeAra();
+                break;
+            default:
+                Console.WriteLine("Hatalı seçim yaptınız.");
+                break;
+        }
+}
+}
 }
