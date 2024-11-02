@@ -8,7 +8,7 @@ class Menu {
             Console.WriteLine("3. Telefon Numarası Güncelle");
             Console.WriteLine("4. Rehber Listeleme (A-Z, Z-A seçimli)");
             Console.WriteLine("5. Rehberde Arama");
-            Console.WriteLine("6. Çıkış");
+            Console.WriteLine("0. Çıkış");
             Console.Write("Seçiminiz: ");
             string? secim = Console.ReadLine();
             switch(secim)
@@ -28,7 +28,7 @@ class Menu {
                 case "5":
                     // Rehberde Arama
                     break;
-                case "6":
+                case "0":
                     // Çıkış
                     break;
                 default:
