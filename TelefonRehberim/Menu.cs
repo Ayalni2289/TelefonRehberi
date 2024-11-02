@@ -1,8 +1,7 @@
 class Menu {
 
-    public void Baslat(){
-        
-
+    public static void Main(string[] args)
+        {
         ListeÖzellikleri listeÖzellikleri = new ListeÖzellikleri();
         bool devam = true;
 
