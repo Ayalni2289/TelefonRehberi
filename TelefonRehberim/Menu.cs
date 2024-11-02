@@ -1,9 +1,10 @@
 class Menu {
 
     public void Baslat(){
+        
 
         ListeÖzellikleri listeÖzellikleri = new ListeÖzellikleri();
-        Boolean devam = true;
+        bool devam = true;
 
         while(devam)
         {
