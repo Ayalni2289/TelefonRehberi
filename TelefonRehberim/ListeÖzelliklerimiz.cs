@@ -1,4 +1,5 @@
 class ListeÖzellikleri{
+
     List<Kisi> Kisilerim = new List<Kisi>();
     
     //Başlangıçta 5 kişi ekledik.
@@ -124,4 +125,26 @@ public void Guncelle(){
     }
 }
 
+public void Listele(){
+    Console.WriteLine("Listeleme türünü seçiniz: ");
+    Console.WriteLine("1. A-Z");
+    Console.WriteLine("2. Z-A");
+    int value = int.Parse(Console.ReadLine());
+    switch(value){
+        case 1:
+            Kisilerim = Kisilerim.OrderBy(kisi => kisi.Ad).ToList();
+            break;
+        case 2:
+            Kisilerim = Kisilerim.OrderByDescending(kisi => kisi.Ad).ToList();
+            break;
+        default:
+            Console.WriteLine("Hatalı seçim yaptınız.");
+            break;
+    }
+    foreach(Kisi kisi in Kisilerim){
+        Console.WriteLine("Ad: {0}, Soyad: {1}, Numara: {2}", kisi.Ad, kisi.Soyad, kisi.Numara);
+    }
+}
+
+public void 
 }
