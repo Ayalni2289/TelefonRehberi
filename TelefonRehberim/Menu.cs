@@ -10,7 +10,7 @@ class Menu {
             Console.WriteLine("5. Rehberde Arama");
             Console.WriteLine("6. Çıkış");
             Console.Write("Seçiminiz: ");
-            string secim = Console.ReadLine();
+            string? secim = Console.ReadLine();
             switch(secim)
             {
                 case "1":
